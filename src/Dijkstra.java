@@ -16,6 +16,8 @@ public class Dijkstra {
                 "Write number: ");
         int choice = scan.nextInt();
 
+
+
         graph.ShortestPath(choice-1);
 
 //        for (int i = 0; i < 16; i++) {
