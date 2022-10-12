@@ -1,20 +1,29 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class Dijkstra {
     static Graph graph = new Graph(16);
     static ArrayList<Integer> arr = new ArrayList<>(16);
-
+    static Scanner scan = new Scanner(System.in);
     static Thread t = Thread.currentThread();
 
 
     public void run() throws InterruptedException {
         addGraph();
 
-        for (int i = 0; i < 16; i++){
-            graph.ShortestPath(i);
-            t.sleep(2500);
-        }
+        System.out.print("From which vertices you want to start? \n" +
+                "Write number: ");
+        int choice = scan.nextInt();
+
+        graph.ShortestPath(choice-1);
+
+//        for (int i = 0; i < 16; i++) {
+//            graph.ShortestPath(i);
+//            t.sleep(2500);
+//        }
+
+        scan.close();
     }
 
 
